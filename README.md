@@ -1,6 +1,6 @@
 # My Coding Portfolio
 
-Welcome to my coding portfolio! This repository contains a collection of projects showcasing my skills in Python and programming. Feel free to explore the finished projects and ongoing ones.
+Welcome! This repository contains a collection of projects showcasing my skills in Python
 
 ## Finished Projects
 
@@ -40,4 +40,4 @@ If you have any questions or suggestions, feel free to reach out to me:
 - LinkedIn: [None](https://www.linkedin.com/in/yourusername/)
 - GitHub: [0JK0](https://github.com/0JK0)
 
-Happy coding!
+
