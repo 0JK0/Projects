@@ -20,7 +20,7 @@ def next ():
     global x 
     
     Sigue = input("Do you want to continue runing the program? (Y / N): ").lower()
-    if Sigue == "y":
+    if Sigue == "y" or Sigue == "yes":
         print (" \n You said Yes, The program continues: \n ")
         x = 1
         main()
