@@ -1,8 +1,10 @@
-
+#The answers to the questions
 answer = ["A","B","C"]
 
+#The Questions past mentiones
 questions = ["Are you gay? \n A.Yes \n B.No \n C.Maybe \n",  "Did you lie? \n A.Perhaps \n B.Nein \n C.Indeed \n",  "Do you promise? \n A.I Promise \n B.No Please peg me \n C.UwU \n"]
 
+#Here are saved the user answers to later be comapared
 guesses = []
 correct = 0
 
@@ -41,7 +43,7 @@ def loop():
     
         
         
-
+#well the main fuction
 def main():
     again = "Y"
     
@@ -55,7 +57,7 @@ def main():
         print("\n Your Answers:", end=" ")
         for i in guesses: print (i , end=" ")
 
-        print("\n \n Your Note  Is:", str(correct*100 / len(answer))+"%")
+        print("\n \n Your Note  Is:", str(correct*100 / len(answer))+"%") #calculates your porcentage
 
         again = input("Do you want to repeat again? (Y/N): ").upper()
     
