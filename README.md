@@ -18,7 +18,7 @@ Welcome! This repository contains a collection of projects showcasing my skills 
 
 - ### Snake Game
   - Description: Making a simple snake game and try to automate it with machine learning.
-  - Goal: Learn to make machine lerning.
+  - Goal: Learn to make machine learning.
   - status: Planning. 
 
 ## How to Use
