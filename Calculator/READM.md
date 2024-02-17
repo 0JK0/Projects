@@ -3,7 +3,7 @@
 2. Choose one of the  options to select a mathematical operation, Use either the number or the name.
 3. Input two numbers separated by a space when prompted.
 4. The program will display the result of the selected operation.
-5. Choose whether to continue running the program.
+5. Choose whether to continue running the program by using "Y" or "Yes" any other word will close the program.
 
 ## Options
 Math options available in the program:
