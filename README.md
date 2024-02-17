@@ -16,14 +16,9 @@ Welcome! This repository contains a collection of projects showcasing my skills 
 
 ## Currently Ongoing Projects
 
-- ### Documentation for Past Projects
-  - Description: Working on comprehensive documentation for the finished projects.
-  - Goal: Provide clear explanations, usage instructions, and code explanations for each project.
-  - Status: In progress.
- 
 - ### Snake Game
   - Description: Making a simple snake game and try to automate it with machine learning.
-  - Goal: Learn to use pygame.
+  - Goal: Learn to make machine lerning.
   - status: Planning. 
 
 ## How to Use
@@ -35,7 +30,7 @@ Welcome! This repository contains a collection of projects showcasing my skills 
 - Learn and incorporate new technologies and programming languages.
 
 ## Contact
-If you have any questions or suggestions, feel free to reach out to me:
+If you have any questions or suggestions do not feel free to reach out to me:
 - Email: julianosorioprof22@gmail.com
 - LinkedIn: [None](https://www.linkedin.com/in/yourusername/)
 - GitHub: [0JK0](https://github.com/0JK0)
