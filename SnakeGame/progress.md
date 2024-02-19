@@ -26,5 +26,5 @@
 
 ### Machine Learning
 
-- I have no idea how to do this yet T-T 
+ □ I have no idea how to do this yet T-T 
 
