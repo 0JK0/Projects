@@ -10,7 +10,7 @@
     
   ■ Make rectangle continually move ✓
 
-  ■ Make white square randomly spawn ✓
+  □ Make white square randomly spawn ✓
 
   □ Make apples dissapear after touched by the head
 
