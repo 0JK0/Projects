@@ -31,7 +31,7 @@ Welcome! This repository contains a collection of projects showcasing my skills 
 
 ## Contact
 If you have any questions or suggestions do not feel free to reach out to me:
-- Email: julianosorioprof22@gmail.com
+- Email: 
 - LinkedIn: [None](https://www.linkedin.com/in/yourusername/)
 - GitHub: [0JK0](https://github.com/0JK0)
 
