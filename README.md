@@ -4,6 +4,11 @@ Welcome! This repository contains a collection of projects showcasing my skills 
 
 ## Finished Projects
 
+- ### Website
+ - Description: A simple website that i use as my personal startpage for firefox
+ - Features: All my most used websites organized, a Javasricpt script used to display time
+ - Usage: If you just want to see it go to https://0jk0.github.io/, or you could also just download the directory
+
 - ### Python Calculator Through Terminal
   - Description: A simple calculator implemented in Python that runs through the terminal.
   - Features: Basic arithmetic operations such as addition, subtraction, multiplication, and division.
