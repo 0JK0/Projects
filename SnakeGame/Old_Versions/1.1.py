@@ -14,7 +14,7 @@ red = (255,0,0)
 white = (255,255,255)
 
 screen = pygame.display.set_mode((COLUMNS*SIZE, ROWS*SIZE)) #(700 , 600)
-pygame.display.set_caption("Snake Game v1")
+pygame.display.set_caption("Snake Game v1.1")
 
 length = 1
 
