@@ -17,7 +17,7 @@ snake_body = [dire[:]] #defines the snakes body
 #-------------
 #Sets up the window
 screen = pygame.display.set_mode((COLUMNS*SIZE, ROWS*SIZE))#(700 , 600)
-pygame.display.set_caption("Snake Game v1.2")# not alot of differences between versions,altough im a workaholic but since im just learning everything takes a looong while
+pygame.display.set_caption("Snake Game v1.5")# not alot of differences between versions,altough im a workaholic but since im just learning everything takes a looong while
 
 #-------------
 # Define colors
