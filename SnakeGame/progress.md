@@ -22,9 +22,9 @@
   
   □  Make Rectangle look like a snake
   
-  □ Make white square look like apple
+  ■ Make white square look like apple
 
-  □ Make Background be grass and such
+  ■ Make Background be grass and such
 
 
 ### "Notes"
