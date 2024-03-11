@@ -25,7 +25,7 @@ Welcome! This repository contains a collection of projects showcasing my skills 
 - ### Snake Game
   - Description: Making a simple snake game and try to automate it with machine learning.
   - Goal: Learn game development and expand my programming logic skill.
-  - status: Half way.
+  - status: Almost There.
 
 ## How to Use
 - Clone the folder of the wanted project to your local machine.
