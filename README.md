@@ -1,6 +1,6 @@
 # My Coding Portfolio
 
-Welcome! This repository contains a collection of projects showcasing my skills in Python
+Welcome! This repository contains a collection of my projects in Python
 
 ## Finished Projects
 
