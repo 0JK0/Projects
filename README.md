@@ -20,12 +20,14 @@ Welcome! This repository contains a collection of my projects in Python
   - Features: Multiple-choice questions, scoring system, and user-friendly interface.
   - Usage: Clone the repository and play the quiz game in the terminal.
 
-## Currently Ongoing Projects
-
 - ### Snake Game
-  - Description: Making a simple snake game and try to automate it with machine learning.
-  - Goal: Learn game development and expand my programming logic skill.
-  - status: Almost There.
+  - Description: A simple Snake Game, Not totally functional
+  - Fetures: Most of the original snake features except for the death afte hittin yourself
+  - Usage: Clone the repository and run it.
+  - Note: Abandoned because it became a big mess and wanted to move to other projects i could actually learn something useful from
+
+## Currently Ongoing Projects
+- None
 
 ## How to Use
 - Clone the folder of the wanted project to your local machine.
