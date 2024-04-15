@@ -11,26 +11,26 @@ Welcome! This repository contains a collection of my projects in Python
 	- Note: For more info read the README.md file insie the folder or use the In-game "Tutorial"
 
 - ### Website
-  - Description: A simple website that i use as my personal startpage for firefox
-  - Features: All my most used websites organized, a Javasricpt script used to display time
-  - Usage: If you just want to see it go to https://0jk0.github.io/, or you could also just download the directory
-  - Note: It might not be the most current version since i change the color scheme alot.
+	- Description: A simple website that i use as my personal startpage for firefox
+	- Features: All my most used websites organized, a Javasricpt script used to display time
+	- Usage: If you just want to see it go to https://0jk0.github.io/, or you could also just download the directory
+	- Note: It might not be the most current version since i change the color scheme alot.
  
 - ### Python Calculator Through Terminal
-  - Description: A simple calculator implemented in Python that runs through the terminal.
-  - Features: Basic arithmetic operations such as addition, subtraction, multiplication, and division.
-  - Usage: Clone the repository and run the calculator from the terminal.
+	- Description: A simple calculator implemented in Python that runs through the terminal.
+	- Features: Basic arithmetic operations such as addition, subtraction, multiplication, and division.
+	- Usage: Clone the repository and run the calculator from the terminal.
 
 - ### Quiz Game Through Terminal
-  - Description: An interactive quiz game built with Python for the terminal.
-  - Features: Multiple-choice questions, scoring system, and user-friendly interface.
-  - Usage: Clone the repository and play the quiz game in the terminal.
+	- Description: An interactive quiz game built with Python for the terminal.
+	- Features: Multiple-choice questions, scoring system, and user-friendly interface.
+	- Usage: Clone the repository and play the quiz game in the terminal.
 
 - ### Snake Game
-  - Description: A simple Snake Game, Not totally functional
-  - Fetures: Most of the original snake features except for the death afte hittin yourself
-  - Usage: Clone the repository and run it.
-  - Note: Abandoned because it became a big mess and wanted to move to other projects i could actually learn something useful from
+	- Description: A simple Snake Game, Not totally functional
+	- Fetures: Most of the original snake features except for the death after hitting yourself
+	- Usage: Clone the repository and run it.
+	- Note: Abandoned because it became a big mess and wanted to move to other projects i could actually learn something useful from
 
 ## Currently Ongoing Projects
 
