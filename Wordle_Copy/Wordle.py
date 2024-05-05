@@ -1,4 +1,3 @@
-from random_word import Wordnik
 import os
 import random
 
@@ -10,6 +9,7 @@ class GameLogic:
         self.correct_letters = ["-","-","-","-","-"]
         self.misplaced = []
         self.past_guess = [[0] * 1 for i in range(4)]
+        self.guess_fedback = []
 
     def clear_screen(self):
         # Clear the terminal screen
@@ -23,11 +23,10 @@ class GameLogic:
         print("\n")
 
     def create_word(self): #gets the random word
-        rw = Wordnik()
-        word = rw.get_random_word(hasDictionaryDef = "true", minCorpusCount = 1000 ,minDictionaryCount =5  ,includePartOfSpeech = "verb", excludePartOfSpeech = "proper noun,name,acronym,noun", minLength = 5, maxLength = 5)
-        #rw.word_of_the_day(date="2018-01-01")
 
-        print(word)
+        with open('Dictionary.txt') as f:
+            words = f.read().splitlines()
+            word = random.choice(words)
 
         for letter in word:
             self.split_word.append(letter.lower()) #Splits the word by letter and put each letter as an item in a list
@@ -49,6 +48,7 @@ class GameLogic:
                 if element in self.split_word and element not in self.misplaced and element not in self.correct_letters :
                     self.misplaced.append(element)
 
+
         # print(" Split.Word: ",self.split_word, "\n Split.guess: ",self.split_guess, "\n Split.Correct_letters: ",self.correct_letters, "\n Split.misplaced: ",self.misplaced)
 
 
@@ -66,23 +66,20 @@ class GameLogic:
             self.clear_screen()
             self.display_banner()
 
-            print("\n")
-            for letter in self.correct_letters: #prints the divided guess but in a way it looks cool ig
-                print(letter,end = " ")
-            print("\n")
-            
-
             random.shuffle(self.misplaced)
             print("Misplaced letters: ",self.misplaced)
 
             self.misplaced.clear()
             print("\n")
 
+
             break
 
 
 
     def play(self): #main game loop but inside a function for "goooood practice"
+        attempts = 0
+
         while True:
             
             self.clear_screen()
@@ -90,29 +87,38 @@ class GameLogic:
             self.display_banner()
 
             word = self.create_word()
-            print(word,"\n") #This should be taken out later tbh is just here for testing
+            # print(word,"\n") #This should be taken out later tbh is just here for testing
 
-
-            for row in self.past_guess:
-                print(row)
-
-           
             for i in range(4):
 
                 self.answer()
 
-                self.check()
+                try:
+                 self.check()
+                except IndexError:
+                    print("\n The Word has to be 5 letters long - No numbers")
+                    break
+                else:
+                    self.keep()
+                    
 
-                self.keep()
-
-                attempts = 0
-                self.past_guess[attempts][0] = self.correct_letters
+                
+                self.past_guess[attempts][0] = self.correct_letters.copy()
                 attempts += 1
+               
 
                 for row in self.past_guess:
-                    print(row)
+                    print(' '.join(str(elem) for elem in row))
+
+                if self.split_guess == self.split_word:
+                    print("\n !YOU WON! \n ")
+                    break
+
 
                 self.split_guess.clear()
+
+            if self.split_guess != self.split_word:
+                print("\n !YOU LOSE! \n The word was:", word, "\n")
                 
             break
 
