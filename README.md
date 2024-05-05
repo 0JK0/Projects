@@ -8,7 +8,7 @@ Welcome! This repository contains a collection of my projects in Python
 	- Description: A "Simplified" copy of the game wordle
 	- Features: Works totally from the terminal with a good and easy to use "GUI"
 	- Usage: Guess a word and the game will you input to help you guess the 5 letters word word you have 6 attempts
-	- Note: For more info read the README.md file insie the folder or use the In-game "Tutorial"
+	- Note: For more info read the README.md file insie the folder.
 
 - ### Website
 	- Description: A simple website that i use as my personal startpage for firefox
