@@ -35,7 +35,7 @@ if option 1 is chosen:
 
         View mode: shows the table again
 
-        Use mode: display 1 by 1 each workout (row), it will display a counter to count sets, after it reaches the amount of sets it will give a resting timer and move to the next workout(row). When it finishes it should display the amount of time taken and save: the routine done, the date and the time it took, in another table; Finally show the History table and ask if they want to (1.Quit 2.Go back to menu)
+        Use mode: display 1 by 1 each workout (row), it will display a counter to count sets, after it reaches the amount of sets it will give a resting timer and move to the next workout(row). When it finishes it should display the amount of time taken and save: the routine done, the date and the time it took. In another table finally show the History table and ask if they want to (1.Quit 2.Go back to menu)
 
         Update mode: Allow to change amount of sets,reps or workouts in said routine then just go to view mode.
 
