@@ -8,13 +8,13 @@ Welcome! This repository contains a collection of my projects in Python
 	- Description: A "Simplified" copy of the game wordle
 	- Features: Works totally from the terminal with a good and easy to use "GUI"
 	- Usage: Guess a word and the game will you input to help you guess the 5 letters word word you have 6 attempts
-	- Note: For more info read the README.md file insie the folder.
+	- Note: For more info read the README.md file inside the folder.
 
 - ### Website
 	- Description: A simple website that i use as my personal startpage for firefox
 	- Features: All my most used websites organized, a Javasricpt script used to display time
 	- Usage: If you just want to see it go to https://0jk0.github.io/, or you could also just download the directory
-	- Note: It might not be the most current version since i change the color scheme alot.
+	- Note: It might not be the most current version since i change the color scheme a lot.
  
 - ### Python Calculator Through Terminal
 	- Description: A simple calculator implemented in Python that runs through the terminal.
@@ -28,7 +28,7 @@ Welcome! This repository contains a collection of my projects in Python
 
 - ### Snake Game
 	- Description: A simple Snake Game, Not totally functional
-	- Fetures: Most of the original snake features except for the death after hitting yourself
+	- Features: Most of the original snake features except for the death after hitting yourself
 	- Usage: Clone the repository and run it.
 	- Note: Abandoned because it became a big mess and wanted to move to other projects i could actually learn something useful from
 
@@ -80,7 +80,7 @@ The way the user(me) is going to interact with the "app" should go something alo
 - Learn and incorporate new technologies and programming languages.
 
 ## Contact
-If you have any questions or suggestions do not feel free to reach out to me:
+If you have any questions or suggestions do not feel free to reach out to me, Thanks <3 :
 - Email: 
 - LinkedIn: [None](https://www.linkedin.com/in/yourusername/)
 - GitHub: [0JK0](https://github.com/0JK0)
