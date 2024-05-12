@@ -86,3 +86,8 @@ If you have any questions or suggestions do not feel free to reach out to me, Th
 - GitHub: [0JK0](https://github.com/0JK0)
 
 
+                            ╱|、
+                          (˚ˎ 。7  
+                           |、˜〵          
+                          じしˍ,)ノ
+
