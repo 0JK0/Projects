@@ -30,10 +30,6 @@ def profesores_tabla():
             "MATERIA": materia}
     
         profesores_list.append(data_fill) 
-    
-        continuar = input("Continuar ingresando profesores? (si/no): ").lower()
-        if continuar!= 'si':
-             break
  
 
         with open("insert_profesores.json", "w") as jf:
@@ -41,6 +37,10 @@ def profesores_tabla():
             jf.write('\n') 
 
         profesores_collection.insert_many(profesores_list)
+
+        continuar = input("Continuar ingresando profesores? (si/no): ").lower()
+        if continuar!= 'si':
+             break
         
        
 
@@ -62,7 +62,7 @@ def Materias_tabla():
         materias_list.append(data_fill)  
         
        
-        continuar = input("Continuar ingresando materias? (sí/no): ").lower()
+        continuar = input("Continuar ingresando materias? (si/no): ").lower()
         if continuar!= 'si':
             break
 
