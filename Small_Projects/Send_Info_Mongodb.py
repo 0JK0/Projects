@@ -1,6 +1,11 @@
 import json
 import pymongo
 
+# En my pc es 27017 cambia este numero si es necesario
+# Las colecciones son Case sensitive
+# Se salva tambien en JSON ademas de mandarlo a Mongodb directamente, lo deje asi para probar
+
+
 client = pymongo.MongoClient('mongodb://localhost:27017/')
 db = client["Colegio"]
 
