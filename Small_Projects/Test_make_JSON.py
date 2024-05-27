@@ -1,25 +1,36 @@
 import json
 
 def profesores_tabla():
-    nombre = input("Insert the name: ")
-    edad = input("Insert the age: ")
-    genero = input("Insert the gender: ")
-    fecha_nacimiento = input("Insert the birthday: ")
-    titulo = input("Insert the title: ")
-    materia = input("Insert the class: ")
+    while True:
+        profesores_list = []
+    
+        nombre = input("Insert the name: ")
+        edad = input("Insert the age: ")
+        genero = input("Insert the gender: ")
+        fecha_nacimiento = input("Insert the birthday: ")
+        titulo = input("Insert the title: ")
+        materia = input("Insert the class: ")
 
-    data_fill = [
-        {"NOMBRE": nombre,
-         "EDAD": edad,
-         "GÉNERO": genero,
-         "FECHA_NACIMIENTO": fecha_nacimiento,
-         "TITULO": titulo,
-         "MATERIA": materia}
-    ]
+        data_fill = {
+            "NOMBRE": nombre,
+            "EDAD": edad,
+            "GÉNERO": genero,
+            "FECHA_NACIMIENTO": fecha_nacimiento,
+            "TITULO": titulo,
+            "MATERIA": materia}
+    
+        profesores_list.append(data_fill) 
+    
+        continuar = input("Do you want to continue? (yes/no): ").lower()
+        if continuar!= 'yes':
+             break
+ 
 
-    with open("demo_insert.json", "a") as jf:
-        json.dump(data_fill, jf)
-        jf.write('\n') 
+        with open("demo_insert.json", "a") as jf:
+            json.dump(data_fill, jf)
+            jf.write('\n') 
+        
+       
             
 
 
@@ -31,13 +42,13 @@ def Materias_tabla():
         horas = input("Insert the Hours: ")
         grado = input("Insert the Grade: ")
 
-        materia_dict = {
+        data_fill = {
             "NOMBRE_MATERIA": nombre,
             "HORAS": horas,
             "GRADO": grado
         }
 
-        materias_list.append(materia_dict)  
+        materias_list.append(data_fill)  
         
        
         continuar = input("Do you want to continue? (yes/no): ").lower()
@@ -61,7 +72,7 @@ def calificaciones_tabla():
         nota3 = input("Insert the 3rd Note: ")
         definitiva = input("Insert the definitve: ")
 
-        materia_dict = {
+        data_fill = {
             "NOMBRE_ESTUDIANTE": nombre,
             "GRADO": grado,
             "PROFESOR": profesor,
@@ -71,7 +82,7 @@ def calificaciones_tabla():
             "DEFINITIVA":definitiva
         }
 
-        calificaciones_list.append(materia_dict)  
+        calificaciones_list.append(data_fill)  
         
        
         continuar = input("Do you want to continue? (yes/no): ").lower()
@@ -84,7 +95,7 @@ def calificaciones_tabla():
 
     
     
-uses = input("Table to use? \n 1.Profesores \n 2.Materias \n 3.Calificaiones ")
+uses = input("Table to use? \n 1.Profesores \n 2.Materias \n 3.Calificaiones \n ")
 
 if uses == "1":
     profesores_tabla()
