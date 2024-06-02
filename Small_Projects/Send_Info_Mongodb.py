@@ -1,5 +1,6 @@
 import json
 import pymongo
+import time
 
 # En my pc es 27017 cambia este numero si es necesario
 # Las colecciones son Case sensitive
@@ -8,6 +9,37 @@ import pymongo
 
 client = pymongo.MongoClient('mongodb://localhost:27017/')
 db = client["Colegio"]
+
+
+#Yeah yeah i know i alwasy use this but it took me an annoying while to figure out and i dont want to re do that
+def display_options(title,options):
+    print("\n")
+    print("+-----------------------------------+")
+    print(f"|          {title}")
+    print("+-----------------------------------+")
+    # For option in options do. The "i" is used because it counts up, enumerate enumerates the list starting from the number given (so it starts counting from 1 instead of 0).
+    for i, option in enumerate(options, 1): 
+        print(f"|  {i}. {option}") # if you ut the {} it will print a variable like text and again the f makes the string more fancy
+    print("+-----------------------------------+")
+
+def create_database():
+    client = pymongo.MongoClient('mongodb://localhost:27017/')
+
+    existing_database = client.list_database_names()
+
+    new_database_name = input("Enter the name for the new DataBase: ")
+    collection_name = input("Enter the name for the 1st collection: ")
+
+    global db
+
+    db = client[new_database_name]
+    
+    try:
+        db.create_collection(collection_name)
+        print("Database and Collection created successfully!")
+    except Exception as e:
+        print("Error: ", e)
+
 
 def profesores_tabla():
     profesores_collection = db['Profesores']
@@ -107,12 +139,28 @@ def calificaciones_tabla():
 
     calificaciones_collection.insert_many(calificaciones_list)
         
+def main():
+    main_menu = ["Make New DataBase             | ","Enter new info into existing  |"]
+    display_options("MongoDB Connection       |",main_menu)
 
-uses = input("Que tabla quieres usar? (1 - 2 - 3) \n 1.Profesores \n 2.Materias \n 3.Calificaciones \n ")
+    start = input("--> ")
 
-if uses == "1":
-    profesores_tabla()
-elif uses == "2":
-    Materias_tabla()
-elif uses == "3":
-    calificaciones_tabla()
+    if start == "1":
+        create_database()
+        print(client.list_database_names())
+    elif start == "2":
+        tables = ["Profesores","Materias","Calificaciones"]
+
+        display_options("Choose Table",tables)
+
+        uses = input("--> ")
+
+        if uses == "1":
+            profesores_tabla()
+        elif uses == "2":
+            Materias_tabla()
+        elif uses == "3":
+            calificaciones_tabla()
+
+if __name__ == "__main__":
+    main()
