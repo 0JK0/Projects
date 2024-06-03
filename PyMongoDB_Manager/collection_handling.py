@@ -1,8 +1,19 @@
+"""
+Collection handling module for PyMongoDB Manager. 
+This module defines the collections class that provides methods to interact with various collections within a MongoDB database.
+"""
+
 import json
 import pymongo
 
-
 class collections:
+
+    """
+    A class used to represent and interact with collections in a MongoDB database.
+
+    Attributes:
+        DataBase (str): The name of the database to interact with.
+    """
 
     def __init__(self,DataBase):
         self.client = pymongo.MongoClient('mongodb://localhost:27017/')

@@ -1,22 +1,38 @@
+"""
+Main Module for PyMongoDB Manager, This script Provivdes functionalities to
+- Create new Mongodb Data Bases
+- Add informaton to existing Data Bases
+- Interact with collections
+"""
+
 import json
 import pymongo
 import time
 import collection_handling as collection
 
-client = pymongo.MongoClient('mongodb://localhost:27017/')
+# Establish a connection to the MongoDB server
+client = pymongo.MongoClient('mongodb://localhost:27017/') 
 
-
-#Yeah yeah i know i alwasy use this but it took me an annoying while to figure out and i dont want to re do that
 def display_options(title,options):
+    """
+    Displays a formatted list of options with a title.
+
+    Args:
+        title (str): The title of the options menu.
+        options (list): A list of options to display.
+    """
+        
     print("\n")
     print("+-----------------------------------+")
     print(f"|          {title}")
     print("+-----------------------------------+")
-    # For option in options do. The "i" is used because it counts up, enumerate enumerates the list starting from the number given (so it starts counting from 1 instead of 0).
+
     for i, option in enumerate(options, 1): 
-        print(f"|  {i}. {option}") # if you ut the {} it will print a variable like text and again the f makes the string more fancy
+        print(f"|  {i}. {option}") 
     print("+-----------------------------------+")
 
+
+# Creates a new database and a collection in MongoDB based on user input.
 def create_database():
     client = pymongo.MongoClient('mongodb://localhost:27017/')
 
@@ -33,7 +49,8 @@ def create_database():
     except Exception as e:
         print("Error: ", e)
 
-        
+
+# Main function to display the menu and hanlde user input.
 def main():
 
     main_menu = ["Make New DataBase             | ","Add Info to Data Base         |"]
