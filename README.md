@@ -40,7 +40,7 @@ Welcome! This repository contains a collection of my projects in Python
 
 ## Currently Ongoing Projects
 
-### Py MongoDB Manager
+### PyMongoDB Manager
 
 #### Description
 
