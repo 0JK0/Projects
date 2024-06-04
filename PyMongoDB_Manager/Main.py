@@ -5,8 +5,6 @@ Main Module for PyMongoDB Manager, This script Provivdes functionalities to
 - Interact with collections
 """
 
-# Working on a rework for this since i found this interesting
-
 import json
 import pymongo
 import time
