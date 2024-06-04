@@ -21,7 +21,7 @@ class collections:
 
 
     def profesores_tabla(self):
-
+        # Inserts new documents into the 'Profesores' collection based on user input.
         
         db = self.client[f"{self.DataBase}"]
 
@@ -131,6 +131,12 @@ class collections:
 
 
     def execute_function(self,user_input):
+        """
+        Executes a function based on user input.
+
+        Args:
+            user_input (str): The user's choice of collection to interact with.
+        """
 
         options = {
             "calificaciones":self.calificaciones_tabla,
@@ -144,3 +150,41 @@ class collections:
             selected_function()
         else:
             print("Invalid Option")
+
+    def new_structure(self,test_list):
+
+        db = self.client[f"{self.DataBase}"]
+
+        new_structure_list = [] 
+        calificaciones_collection = db['Calificaciones']
+        
+        while True:
+            nombre_estudiante = input(f"Ingresa el {test_list[0]} del estudiante: ")
+            grado = input(f"Ingresa el {test_list[1]} del estudiante: ")
+            profesor = input(f"Ingresa el {test_list[2]} del profesor del estudiante: ")
+            nota1 = input(f"Ingresa la {test_list[3]}: ")
+            nota2 = input("Ingresa la segunda nota: ")
+            nota3 = input("Ingresa la tercera nota: ")
+            definitiva = input("Ingresa la nota definitiva: ")
+
+            data_fill = {
+                test_list[0]: nombre_estudiante,
+                test_list[1]: grado,
+                test_list[2]: profesor,
+                test_list[3]: nota1,
+                "NOTA2": nota2,
+                "NOTA3": nota3,
+                "DEFINITIVA": definitiva
+            }
+
+            new_structure_list.append(data_fill)  
+            
+        
+            continuar = input("Continuar ingresando calificaciones? (si/no): ").lower()
+            if continuar!= 'si':
+                break
+
+        with open("insert_calificaciones.json", "w") as jf:
+            json.dump(new_structure_list, jf)
+
+        calificaciones_collection.insert_many(new_structure_list)

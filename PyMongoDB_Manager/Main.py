@@ -12,6 +12,9 @@ import pymongo
 import time
 import collection_handling as collection
 
+def not_added():
+    print("This function is yet to be added")
+
 # Establish a connection to the MongoDB server
 client = pymongo.MongoClient('mongodb://localhost:27017/') 
 
@@ -52,7 +55,57 @@ def create_database():
         print("Error: ", e)
 
 
-# Main function to display the menu and hanlde user input.
+def add_info(db_list):
+    """
+    Course of actions after choosing the 2nd option in the main menu
+    Display option to select a Database (db) and afterwards a collection (cll) inside said db
+    After selecting the collection the user is prompted to choose an action to execute on that collection
+
+    Args:
+        db_list (list): The list of DataBases present.
+
+    Returns:
+        None
+    """
+    
+    test_list = ["Dick","Balls","Cum","Anus"]
+
+    #1st Options Menu
+    display_options("Choose DataBase          |",db_list)
+
+    db_use = input("--> ")
+    collection_instance = collection.collections(db_use)
+
+    db = client[db_use]
+
+    
+    # 2nd Options Menu
+    collection_names = db.list_collection_names()
+    cll_list = []
+    for name in collection_names:
+        cll_list.append(name)
+
+    display_options("Choose Collection        |",cll_list)
+
+    user_input = input("--> ")
+
+    #3rd option menu
+
+    wtd = ["Use Premade JSON Structure    |","Make New JSON Structure       |"]
+    display_options("What To do?              |",wtd)
+
+    do = input("--> ")
+
+    if do == "1":
+        collection_instance.execute_function(user_input)
+    elif do == "2":
+        collection_instance.new_structure(test_list)
+    else:
+        print("Invalid Option. Choose Between 1 or 2")
+    
+
+
+# Main function to display the menu and handle user input.
 def main():
 
     main_menu = ["Make New DataBase             | ","Add Info to Data Base         |"]
@@ -69,26 +122,7 @@ def main():
         create_database()
 
     elif start == "2":
-
-        display_options("Choose DataBase          |",database_list)
-
-        db_use = input("--> ")
-        collection_instance = collection.collections(db_use)
-
-        db = client[db_use]
-
-        
-
-        collection_names = db.list_collection_names()
-        collection_list = []
-        for name in collection_names:
-            collection_list.append(name)
-
-        display_options("Choose Collection        |",collection_list)
-
-        user_input = input("--> ")
-
-        collection_instance.execute_function(user_input)
+        add_info(database_list)
 
 
 
