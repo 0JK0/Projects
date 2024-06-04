@@ -1,4 +1,4 @@
-# Currently Ongoing Project
+# Working Project 
 It still lacks the deleting and auto updating history
 
 ### How to use?
