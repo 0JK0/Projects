@@ -47,9 +47,9 @@ class collections:
             profesores_list.append(data_fill) 
     
 
-            with open("insert_profesores.json", "w") as jf:
-                json.dump(profesores_list, jf)
-                jf.write('\n') 
+            #with open("insert_profesores.json", "w") as jf:
+            #    json.dump(profesores_list, jf)
+            #    jf.write('\n') 
 
             profesores_collection.insert_many(profesores_list)
 
@@ -85,9 +85,6 @@ class collections:
             if continuar!= 'si':
                 break
 
-        with open("insert_materias.json", "w") as jf:
-            json.dump(materias_list, jf)
-        
         materias_collection.insert_many(materias_list)
             
             
@@ -123,9 +120,6 @@ class collections:
             continuar = input("Continuar ingresando calificaciones? (si/no): ").lower()
             if continuar!= 'si':
                 break
-
-        with open("insert_calificaciones.json", "w") as jf:
-            json.dump(calificaciones_list, jf)
 
         calificaciones_collection.insert_many(calificaciones_list)
 
@@ -185,10 +179,6 @@ class collections:
         
             continuar = input("Continuar ingresando? (si/no): ").lower()
             if continuar!= 'si':
-                print(data_fill,new_structure_list)
                 break
-
-        with open("insert_personalized_structure.json", "w") as jf:
-            json.dump(new_structure_list, jf)
 
         new_structure_collection.insert_many(new_structure_list)
