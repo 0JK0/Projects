@@ -67,8 +67,6 @@ def add_info(db_list):
     Returns:
         None
     """
-    
-    test_list = ["Dick","Balls","Cum","Anus"]
 
     #1st Options Menu
     display_options("Choose DataBase          |",db_list)
@@ -87,7 +85,7 @@ def add_info(db_list):
 
     display_options("Choose Collection        |",cll_list)
 
-    user_input = input("--> ")
+    cll_use = input("--> ")
 
     #3rd option menu
 
@@ -97,9 +95,9 @@ def add_info(db_list):
     do = input("--> ")
 
     if do == "1":
-        collection_instance.execute_function(user_input)
+        collection_instance.execute_function(cll_use)
     elif do == "2":
-        collection_instance.new_structure(test_list)
+        collection_instance.new_structure(cll_use)
     else:
         print("Invalid Option. Choose Between 1 or 2")
     

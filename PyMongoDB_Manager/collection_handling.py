@@ -151,40 +151,44 @@ class collections:
         else:
             print("Invalid Option")
 
-    def new_structure(self,test_list):
+    def new_structure(self,Coll):
+
+        """
+        Allows the user to make an entry for the choosen database and collection, using personalized camps.
+
+        Args:
+            Coll (str): The collection that is going to be used
+
+        Returns:
+            None
+
+        """
 
         db = self.client[f"{self.DataBase}"]
 
         new_structure_list = [] 
-        calificaciones_collection = db['Calificaciones']
+        new_structure_collection = db[Coll]
+
+        print("Write the camps you want to use separated by spaces. ") 
+        camps = input("--> ").split()
         
         while True:
-            nombre_estudiante = input(f"Ingresa el {test_list[0]} del estudiante: ")
-            grado = input(f"Ingresa el {test_list[1]} del estudiante: ")
-            profesor = input(f"Ingresa el {test_list[2]} del profesor del estudiante: ")
-            nota1 = input(f"Ingresa la {test_list[3]}: ")
-            nota2 = input("Ingresa la segunda nota: ")
-            nota3 = input("Ingresa la tercera nota: ")
-            definitiva = input("Ingresa la nota definitiva: ")
-
-            data_fill = {
-                test_list[0]: nombre_estudiante,
-                test_list[1]: grado,
-                test_list[2]: profesor,
-                test_list[3]: nota1,
-                "NOTA2": nota2,
-                "NOTA3": nota3,
-                "DEFINITIVA": definitiva
-            }
+            
+            data_fill = {}
+            
+            for camp in camps:
+                value = input(f"Ingresa el {camp} : ")
+                data_fill[camp] = value
 
             new_structure_list.append(data_fill)  
             
         
-            continuar = input("Continuar ingresando calificaciones? (si/no): ").lower()
+            continuar = input("Continuar ingresando? (si/no): ").lower()
             if continuar!= 'si':
+                print(data_fill,new_structure_list)
                 break
 
-        with open("insert_calificaciones.json", "w") as jf:
+        with open("insert_personalized_structure.json", "w") as jf:
             json.dump(new_structure_list, jf)
 
-        calificaciones_collection.insert_many(new_structure_list)
+        new_structure_collection.insert_many(new_structure_list)
