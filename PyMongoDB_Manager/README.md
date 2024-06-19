@@ -23,7 +23,7 @@ Features
 Installation
 ------------
 
-To use **PyMongoDB\_Manager**, you need to have Python and MongoDB installed on your machine. Additionally, you'll need the pymongo library you can install pymongo using pip, inally run the Main.py file.
+To use **PyMongoDB\_Manager**, you need to have Python and MongoDB installed on your machine. Additionally, you'll need the pymongo library you can install pymongo using pip, finally run the Main.py file.
 
 ### 1\. Creating a New Database
 
