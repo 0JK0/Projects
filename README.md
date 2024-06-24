@@ -4,6 +4,21 @@ Welcome! This repository contains a collection of my projects in Python
 
 ## Finished Projects
 
+- ### PyMongoDB Manager
+* **Description:** A Python-based tool to manage MongoDB databases and collections.
+  
+* **Features:**
+    * Create new MongoDB databases and collections.
+    * Add information to existing databases and collections.
+    * User-friendly terminal interface for interacting with collections.
+      
+* **Usage:**
+    * Clone the repository.
+    * Run Main.py to start the tool.
+    * Follow the on-screen prompts to create databases, add collections, and input data.
+      
+- Note: For detailed usage instructions, refer to the README.md file inside the repository.
+
 - ### Wordle copy
     - Description: A "Simplified" copy of the game wordle
     - Features: Works totally from the terminal with a good and easy to use "GUI"
@@ -40,17 +55,7 @@ Welcome! This repository contains a collection of my projects in Python
 
 ## Currently Ongoing Projects
 
-### PyMongoDB Manager
-
-#### Description
-
-a python subcommand-based CLI to facilitate my work with MongoDB
-
-### How?
-
-Using python with pymongo i want to integrate as much as i can of Mongodb functionality into my linux terminal
-the feedback given should be easy to understand and everything should be easy to use
-
+### None
 
 ## How to Use (for most of them)
 - Clone the folder of the wanted project to your local machine.
